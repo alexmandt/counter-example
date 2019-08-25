@@ -4,8 +4,13 @@ let currentDate = moment();
 let destinationDate = moment(yourDate,'YYYY-MM-DD');
 let timeDifference = moment.duration(destinationDate.diff(currentDate,"seconds"));
 
-let clock = $('.your-clock').FlipClock(timeDifference.asSeconds(), {
+let clock = $('.your-clock').FlipClock({
 	clockFace: 'DailyCounter',
-	countdown: true,
-	language: 'german'
+	clockFaceOptions: {
+		countdown: true,
+		language: 'german'
+	}
 });
+
+clock.stop().setFaceValue(destinationDate.diff(currentDate, 's'))
+.start();
