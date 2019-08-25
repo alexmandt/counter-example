@@ -6,8 +6,7 @@ let timeDifference = destinationDate.diff(currentDate,"seconds");
 
 let clock = $('.your-clock').FlipClock(timeDifference,{
 	clockFace: 'DailyCounter',
-	clockFaceOptions: {
-		countdown: true,
-		language: 'german'
-	}
+	countdown: true,
+	language: 'german'
+	
 });
