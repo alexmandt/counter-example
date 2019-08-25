@@ -1,4 +1,4 @@
-let  yourDate = "2019-08-26";
+let  yourDate = "2019-09-02";
 
 let currentDate = moment();
 let destinationDate = moment(yourDate,'YYYY-MM-DD');
